@@ -1,9 +1,11 @@
 ---
 
-- hosts: all
+- hosts: localhost
+  connection: local
   become: true
   gather_facts: true
   roles:
+    - { role: update-ansible-dependencies }
     - { role: cis-amazon-linux-2,
         in_vm: true
       }
