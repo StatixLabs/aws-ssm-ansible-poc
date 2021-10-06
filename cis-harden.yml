@@ -4,4 +4,6 @@
   become: true
   gather_facts: true
   roles:
-    - cis-amazon-linux-2
+    - { role: cis-amazon-linux-2,
+        in_vm: true
+      }
