@@ -4,6 +4,9 @@
   connection: local
   become: true
   gather_facts: true
+  vars:
+    cis_apply_level_2_profile: false
+    cis_level_1_exclusions: ['1.1.2','1.1.6','1.1.7','1.1.11','1.1.12','1.1.13']
   roles:
     - { role: update-ansible-dependencies }
     - { role: cis-amazon-linux-2,
